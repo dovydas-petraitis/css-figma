@@ -4,16 +4,17 @@
     box-sizing: content-box;
 }
 
-/* Header */
+/* Header ir Navigation */
 
 header {
+    text-align: center;
     margin:auto;
     width: 100%;
-    height: 91px; 
+    min-height: 91px; 
     background-color: #FFF2F3;
 }
 
-.logo {
+header .logo {
     display: inline-flex;
     padding: 13px 87px 13px 0px;
     align-items: center; 
@@ -22,19 +23,19 @@ header {
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px; /* 133.333% */
+    line-height: 32px;
     letter-spacing: 0.1px; 
 }
 
-.header-container {
+header .header-container {
     margin:0 auto;
-    width: 1322px;
-    min-height: 92px;;
+    max-width: 100%;
+    min-height: 92px;
     text-align: center;
-    display: flex;
+    display: inline-block;
 }
 
-nav {
+header nav {
     width: 815px;
     display: inline-flex;
     padding: 3px 0px;
@@ -59,14 +60,14 @@ header a {
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 171.429% */
+    line-height: 24px; 
     letter-spacing: 0.2px; 
     text-decoration: none;
     color: #737373;
     text-align: center; 
 }
 
-.login {
+header .login {
     width: 300px;
     display: flex;
     padding: 15px 25px;
@@ -74,7 +75,7 @@ header a {
     gap: 15px;
 }
 
-.login-btn {
+header .login-btn {
     display:flex;
     color:#96BB7C;
     padding-right:45px;
@@ -91,30 +92,33 @@ header a {
     padding-left:5px;
 }
 
+
+/* Main blokas */
+
 main {
     background-color: #FFF2F3;
-    display:inline-flex;
+    display: inline-flex;
     width: 100%;
+    justify-content: flex-end;
     align-items: center;
-    gap: 30px; 
 }
 
+
 .row-one {
+    margin:auto;
+    padding: 100px 200px 200px 200px; 
+    display: inline-block;
     width: 50%;
-    display: flex;
-    width: 573px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
-    flex-shrink: 0; 
 }
 
 .row-two {
+    float:right;
     width: 50%;
 }
 
-h1 {
+main h1 {
     color: var(--text-color, #252B42);
     font-family: Montserrat;
     font-size: 58px;
@@ -126,11 +130,80 @@ h1 {
 
 .hello {
     color: var(--primary-color, #96BB7C);
-    /* h5 */
     font-family: Montserrat;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
     letter-spacing: 0.1px; 
+}
+
+main h4 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+}
+
+/* Main buttons */
+
+main .buttons {
+    display: inline-flex;
+}
+
+main .join-btn2 {
+    display: flex;
+    padding: 15px 40px;
+    margin-right:10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    background: var(--primary-color, #96BB7C);
+    color:white;
+    text-decoration: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; 
+    letter-spacing: 0.2px;
+    
+}
+
+main .learn-btn {
+    text-decoration: none;
+    display: flex;
+    padding: 15px 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-color, #96BB7C);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px; /* 157.143% */
+    letter-spacing: 0.2px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color, #96BB7C);
+}
+
+main .learn-btn:hover {
+    text-decoration: none;
+    background-color:#96BB7C;
+    color:white;
+    border: 1px solid var(--primary-color, #96BB7C);
+}
+
+main .join-btn2:hover {
+    text-decoration: none;
+    background-color:white;
+    color:#96BB7C;
+    border: 1px solid var(--primary-color, #96BB7C);
 }
